@@ -52,8 +52,11 @@ function addTask(text) {
 
 function deleteTask(taskId) {
   const taskIndex = taskListArray.findIndex((elem) => elem.id === taskId);
-  taskListArray.splice(taskIndex, 1);
+  const deleted = taskListArray.splice(taskIndex, 1);
   renderList();
+  setTimeout(() => {
+    window.alert(`TASK: "${deleted[0].text}" is deleted. `);
+  }, 0);
 }
 
 // toggleCompleted function
@@ -61,6 +64,13 @@ function toggleStatus(taskId) {
   const taskIndex = taskListArray.findIndex((elem) => elem.id === taskId);
   taskListArray[taskIndex].completed = !taskListArray[taskIndex].completed;
   renderList();
+  setTimeout(() => {
+    window.alert(
+      `TASK: "${taskListArray[taskIndex].text}" is marked ${
+        taskListArray[taskIndex].completed ? "COMPLETED" : "PENDING"
+      }.`
+    );
+  }, 0);
 }
 // ADD TASK TO DOM
 function addTaskToDom(task) {
