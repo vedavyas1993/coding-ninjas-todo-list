@@ -83,6 +83,10 @@ function renderList() {
   tasksList.innerHTML = "";
   let completedTasksList = taskListArray.filter((task) => task.completed);
   let pendingTasksList = taskListArray.filter((task) => !task.completed);
+
+  allTasksCount[0].innerHTML = taskListArray.length;
+  pendingTasksCount[0].innerHTML = pendingTasksList.length;
+  completedTasksCount[0].innerHTML = completedTasksList.length;
   if (currentList == "all") {
     listToBeRendered = taskListArray;
     if (taskListArray.length == 0) {
@@ -114,10 +118,6 @@ function renderList() {
   for (let i = 0; i < listToBeRendered.length; i++) {
     addTaskToDom(listToBeRendered[i]);
   }
-
-  allTasksCount[0].innerHTML = taskListArray.length;
-  pendingTasksCount[0].innerHTML = pendingTasksList.length;
-  completedTasksCount[0].innerHTML = completedTasksList.length;
 }
 
 function setSelectedButton(selected) {
