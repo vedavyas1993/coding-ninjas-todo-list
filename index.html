@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo list</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="app-container">
+        <h1 id="main-heading">MY TODO LIST</h1>
+        <div class="input-container">
+          <form>
+            <input
+              type="text"
+              id="todo-input-text"
+              autocomplete="off"
+              placeholder="Add your task"
+            />
+            <button id="add-btn" type="button"><p>+</p></button>
+          </form>
+        </div>
+        <div id="buttons-container">
+          <button class="all-btn selected">All</button>
+          <button class="completed-btn">Completed</button>
+          <button class="pending-btn">pending</button>
+        </div>
+        <div class="list-container">
+          <ul id="tasks-list"></ul>
+        </div>
+        <div class="all-tasks-count">
+          All tasks : <span class="all-tasks">0</span>
+        </div>
+        <div class="completed-tasks-count">
+          completed tasks : <span class="completed-tasks">0</span>
+        </div>
+        <div class="pending-tasks-count">
+          Pending tasks : <span class="pending-tasks">0</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
