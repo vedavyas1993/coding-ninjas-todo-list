@@ -88,7 +88,7 @@ function addTaskToDom(task) {
   tasksList.append(li);
 }
 
-// rendering list
+// rendering list based on selected list
 function renderList() {
   tasksList.innerHTML = "";
   let completedTasksList = taskListArray.filter((task) => task.completed);
@@ -130,6 +130,7 @@ function renderList() {
   }
 }
 
+// highlight selected list button
 function setSelectedButton(selected) {
   let all = document.getElementsByClassName("all-btn");
   let completed = document.getElementsByClassName("completed-btn");
@@ -156,6 +157,7 @@ function setSelectedButton(selected) {
   }
 }
 
+// event delegation
 function clickHandler(event) {
   let className = event.target.className;
   let taskId = event.target.dataset.id;
@@ -184,4 +186,6 @@ function clickHandler(event) {
     renderList();
   }
 }
+
+// initial render on page load
 renderList();
