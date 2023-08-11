@@ -8,8 +8,10 @@
   </head>
   <body>
     <div class="container">
+      <!-- main container -->
       <div class="app-container">
         <h1 id="main-heading">MY TODO LIST</h1>
+        <!-- input form to add task -->
         <div class="input-container">
           <form>
             <input
@@ -21,14 +23,17 @@
             <button id="add-btn" type="button"><p>+</p></button>
           </form>
         </div>
+        <!-- buttons to select list type -->
         <div id="buttons-container">
           <button class="all-btn selected">All</button>
           <button class="completed-btn">Completed</button>
           <button class="pending-btn">pending</button>
         </div>
+        <!-- task list container -->
         <div class="list-container">
           <ul id="tasks-list"></ul>
         </div>
+        <!-- tasks count -->
         <div class="all-tasks-count">
           All tasks : <span class="all-tasks">0</span>
         </div>
