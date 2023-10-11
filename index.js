@@ -30,7 +30,7 @@ function handleInput(event) {
   }
 }
 
-// add task function
+// add task function task list
 function addTask(text) {
   if (!text) {
     alert("Input text cannot be empty.");
